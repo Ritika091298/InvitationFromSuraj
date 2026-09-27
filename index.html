@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suraj &amp; Ritika — Wedding Invitation</title>
+  <meta name="description" content="You are cordially invited to the wedding of Suraj &amp; Ritika — 5th December 2026, Maa Kalyaneswari Atithi Niwas, Near Maithon Dam." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <!-- Decorative animated fireworks canvas (behind content) -->
+  <canvas id="fireworks"></canvas>
+
+  <!-- Full wedding instrumental: plays continuously until the footer is reached. -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="Jashn E Bahara Instrumental.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ===================== ENVELOPE INTRO ===================== -->
+  <div class="envelope-overlay" id="envelope-overlay">
+    <div class="petals" aria-hidden="true">
+      <img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" />
+    </div>
+    <div class="envelope-stage">
+      <p class="envelope-hint" id="envelope-hint" data-en="Tap the envelope to open" data-hi="निमंत्रण खोलने के लिए लिफ़ाफ़े को छुएँ">Tap the envelope to open</p>
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the invitation">
+        <div class="env-back"></div>
+        <div class="env-letter">
+          <div class="env-letter-inner">
+            <div class="ornament top"><img class="divider-img" src="divider.svg" alt="" /></div>
+            <p class="env-pretitle" data-en="Wedding Invitation" data-hi="विवाह निमंत्रण">Wedding Invitation</p>
+            <p class="env-names">Suraj <span class="amp">&amp;</span> Ritika</p>
+            <div class="ornament bottom"><img class="divider-img" src="divider.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="env-front"></div>
+        <div class="env-flap"><span class="env-seal">S&amp;R</span></div>
+      </div>
+      <button class="enter-btn" id="enter-btn" type="button" hidden data-en="View Invitation &#8964;" data-hi="निमंत्रण देखें &#8964;">View Invitation &#8964;</button>
+    </div>
+  </div>
+
+  <!-- Language switch -->
+  <div class="lang-switch" role="group" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="en" type="button">English</button>
+    <button class="lang-btn" data-lang="hi" type="button">हिन्दी</button>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="home">
+    <img class="corner-img tl" src="corner.svg" alt="" aria-hidden="true" />
+    <img class="corner-img tr" src="corner.svg" alt="" aria-hidden="true" />
+    <img class="corner-img bl" src="corner.svg" alt="" aria-hidden="true" />
+    <img class="corner-img br" src="corner.svg" alt="" aria-hidden="true" />
+    <div class="petals" aria-hidden="true">
+      <img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" /><img src="flower.svg" alt="" />
+    </div>
+    <div class="hero-frame">
+      <div class="ganeshji-block">
+        <img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/ganeshji.jpg" alt="Ganesh Ji" />
+      </div>
+      <div class="ornament top"><img class="divider-img" src="divider.svg" alt="" /></div>
+      <p class="pre-title" data-en="Together with their families" data-hi="अपने परिवार के साथ">Together with their families</p>
+      <p class="invite-line" data-en="We joyfully invite you to the wedding of" data-hi="हम आपको सादर आमंत्रित करते हैं इस शुभ विवाह में">We joyfully invite you to the wedding of</p>
+
+      <h1 class="couple">
+        <span class="name">Suraj</span>
+        <span class="amp">&amp;</span>
+        <span class="name">Ritika</span>
+      </h1>
+
+      <p class="wed-venue" data-en="Maa Kalyaneswari Atithi Niwas · Near Maithon Dam" data-hi="माँ कल्याणेश्वरी अतिथि निवास · मैथन डैम के पास">Maa Kalyaneswari Atithi Niwas · Near Maithon Dam</p>
+      <div class="ornament bottom"><img class="divider-img" src="divider.svg" alt="" /></div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">&#8964;</div>
+  </header>
+
+  <!-- ===================== QUOTE ===================== -->
+  <section class="quote-band">
+    <p class="quote" data-en="&ldquo;Two families, one promise — bound forever in love &amp; blessings.&rdquo;"
+                     data-hi="&ldquo;दो परिवार, एक वचन — प्रेम एवं आशीर्वाद में सदा के लिए बंधे।&rdquo;">
+      &ldquo;Two families, one promise — bound forever in love &amp; blessings.&rdquo;
+    </p>
+  </section>
+
+  <!-- ===================== SCRATCH CARD ===================== -->
+  <section class="scratch-section" id="scratch">
+    <h2 class="section-title" data-en="Save The Date" data-hi="तिथि सुरक्षित रखें">Save The Date</h2>
+    <p class="scratch-sub" data-en="Scratch the golden card to reveal our special day" data-hi="हमारे शुभ दिन को जानने के लिए सुनहरे कार्ड को खुरचें">Scratch the golden card to reveal our special day</p>
+
+    <div class="scratch-wrap">
+      <div class="scratch-reveal">
+        <div class="ornament top"><img class="divider-img" src="divider.svg" alt="" /></div>
+        <p class="scratch-label" data-en="Save The Date" data-hi="तिथि सुरक्षित रखें">Save The Date</p>
+        <p class="scratch-date">05 &middot; 12 &middot; 2026</p>
+        <p class="scratch-day" data-en="Saturday &middot; The Wedding" data-hi="शनिवार &middot; विवाह">Saturday &middot; The Wedding</p>
+        <div class="ornament bottom"><img class="divider-img" src="divider.svg" alt="" /></div>
+      </div>
+      <canvas class="scratch-canvas" id="scratch-canvas"></canvas>
+    </div>
+    <p class="scratch-tip" id="scratch-tip" data-en="&#9757; Use your finger or mouse to scratch away the gold" data-hi="&#9757; उँगली या माउस से सुनहरी परत खुरचें">&#9757; Use your finger or mouse to scratch away the gold</p>
+  </section>
+
+  <!-- ===================== COUNTDOWN ===================== -->
+  <section class="countdown-section locked" id="countdown">
+    <h2 class="section-title light" data-en="Counting Down To Our Big Day" data-hi="हमारे शुभ दिन की उलटी गिनती">Counting Down To Our Big Day</h2>
+    <div class="countdown" id="countdown-timer" aria-live="polite">
+      <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label" data-en="Days" data-hi="दिन">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-label" data-en="Hours" data-hi="घंटे">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-mins">00</span><span class="cd-label" data-en="Minutes" data-hi="मिनट">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><span class="cd-label" data-en="Seconds" data-hi="सेकंड">Seconds</span></div>
+    </div>
+    <p class="countdown-done" id="countdown-done" hidden data-en="The day is here — Let the celebrations begin!" data-hi="वह शुभ दिन आ गया है — उत्सव आरंभ करें!">The day is here — Let the celebrations begin!</p>
+  </section>
+
+  <!-- ===================== INTRODUCING THE FAMILIES ===================== -->
+  <section class="couple-section" id="families">
+    <h2 class="section-title" data-en="Introducing the Families" data-hi="परिवार परिचय">Introducing the Families</h2>
+    <p class="events-sub" data-en="With hearts full of joy, two families become one" data-hi="हर्ष से भरे हृदय के साथ, दो परिवार एक होते हैं">With hearts full of joy, two families become one</p>
+    <div class="couple-grid">
+      <article class="person">
+        <div class="person-emblem"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/groom.jpg" alt="" /></div>
+        <p class="person-role" data-en="The Groom&rsquo;s Family" data-hi="वर पक्ष">The Groom&rsquo;s Family</p>
+        <p class="person-place" data-en="Haldwani, Uttarakhand" data-hi="हल्द्वानी, उत्तराखंड">Haldwani, Uttarakhand</p>
+        <p class="person-parents" data-en="Smt. Savita &amp; Shri Rajendra Kumar Lumba"
+                                  data-hi="श्रीमती सविता एवं श्री राजेन्द्र लुम्बा">Smt. Savita &amp; Shri Rajendra Kumar Lumba</p>
+        <p class="person-intro" data-en="joyfully present their beloved son" data-hi="सहर्ष प्रस्तुत करते हैं अपने प्रिय पुत्र">joyfully present their beloved son</p>
+        <h3 class="person-name" data-en="Suraj" data-hi="सूरज">Suraj</h3>
+        <div class="person-lineage">
+          <p data-en="Grandson of Late Shri Brij Mohan Lumba &amp; Late Smt. Chanchal Lumba" data-hi="स्वर्गीय श्री ब्रिज मोहन लुम्बा एवं स्वर्गीय श्रीमती चंचल लुम्बा के पौत्र">Grandson of Late Shri Brij Mohan Lumba &amp; Late Smt. Chanchal Lumba</p>
+          <p data-en="Brother of Neha Lumba &amp; Nidhi Lumba Chaudhary" data-hi="नेहा लुम्बा एवं निधि लुम्बा चौधरी के भाई">Brother of Neha Lumba &amp; Nidhi Lumba Chaudhary</p>
+        </div>
+      </article>
+
+      <div class="heart-divider" aria-hidden="true"><img src="heart.svg" alt="" /></div>
+
+      <article class="person">
+        <div class="person-emblem"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/bride.jpg" alt="" /></div>
+        <p class="person-role" data-en="The Bride&rsquo;s Family" data-hi="वधू पक्ष">The Bride&rsquo;s Family</p>
+        <p class="person-place" data-en="Maithon, Jharkhand" data-hi="मैथन, झारखंड">Maithon, Jharkhand</p>
+        <p class="person-parents" data-en="Smt. Maha Laxmi &amp; Shri Gopal Kumar Mahto"
+                                   data-hi="श्रीमती महा लक्ष्मी एवं श्री गोपाल महतो">Smt. Maha Laxmi &amp; Shri Gopal Kumar Mahto</p>
+        <p class="person-intro" data-en="joyfully present their beloved daughter" data-hi="सहर्ष प्रस्तुत करते हैं अपनी प्रिय पुत्री">joyfully present their beloved daughter</p>
+        <h3 class="person-name" data-en="Ritika" data-hi="रितिका">Ritika</h3>
+        <div class="person-lineage">
+          <p data-en="Granddaughter of Late Shri Ram Ekbal Mahto &amp; Smt. Subhadra Devi" data-hi="स्वर्गीय श्री राम एकबाल महतो एवं श्रीमती सुभद्रा देवी की पौत्री">Granddaughter of Late Shri Ram Ekbal Mahto &amp; Smt. Subhadra Devi</p>
+          <p data-en="Niece of Shri Shashipal Mehta" data-hi="श्री शशिपाल मेहता की भतीजी">Niece of Shri Shashipal Mehta</p>
+          <p data-en="Sister of Rohit Kumar" data-hi="रोहित कुमार की बहन">Sister of Rohit Kumar</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== EVENTS ===================== -->
+  <section class="events-section" id="events">
+    <h2 class="section-title" data-en="Wedding Celebrations" data-hi="विवाह समारोह">Wedding Celebrations</h2>
+    <p class="events-sub" data-en="Join us for every joyful moment" data-hi="हर खुशी के पल में हमारे साथ रहें">Join us for every joyful moment</p>
+
+    <div class="timeline">
+      <!-- Haldi & Mehndi -->
+      <article class="event-card">
+        <div class="event-icon"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/haldi.jpg" alt="" /></div>
+        <div class="event-body">
+          <h3 class="event-name" data-en="Haldi &amp; Mehndi" data-hi="हल्दी एवं मेहंदी">Haldi &amp; Mehndi</h3>
+          <p class="event-date" data-en="Friday, 4th December 2026" data-hi="शुक्रवार, 4 दिसम्बर 2026">Friday, 4th December 2026</p>
+          <p class="event-time" data-en="Starts at 10:00 AM" data-hi="प्रातः 10:00 बजे से">Starts at 10:00 AM</p>
+          <p class="event-desc" data-en="A colourful morning of turmeric blessings &amp; henna artistry." data-hi="हल्दी के आशीर्वाद एवं मेहंदी की सुंदरता से भरी रंगीन सुबह।">A colourful morning of turmeric blessings &amp; henna artistry.</p>
+        </div>
+      </article>
+
+      <!-- Sangeet & Engagement -->
+      <article class="event-card">
+        <div class="event-icon"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/dhol.jpg" alt="" /></div>
+        <div class="event-body">
+          <h3 class="event-name" data-en="Sangeet &amp; Engagement" data-hi="संगीत एवं सगाई">Sangeet &amp; Engagement</h3>
+          <p class="event-date" data-en="Friday, 4th December 2026" data-hi="शुक्रवार, 4 दिसम्बर 2026">Friday, 4th December 2026</p>
+          <p class="event-time" data-en="Starts at 7:00 PM" data-hi="सायं 7:00 बजे से">Starts at 7:00 PM</p>
+          <p class="event-desc" data-en="An evening of music &amp; dance with Tilak for the groom and Chunni for the bride." data-hi="संगीत एवं नृत्य से भरी शाम, वर के लिए तिलक एवं वधू के लिए चुन्नी की रस्म के साथ।">An evening of music &amp; dance with Tilak for the groom and Chunni for the bride.</p>
+        </div>
+      </article>
+
+      <!-- Wedding -->
+      <article class="event-card highlight">
+        <div class="event-icon"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/couple.jpg" alt="" /></div>
+        <div class="event-body">
+          <h3 class="event-name" data-en="The Wedding" data-hi="विवाह">The Wedding</h3>
+          <p class="event-date" data-en="Saturday, 5th December 2026" data-hi="शनिवार, 5 दिसम्बर 2026">Saturday, 5th December 2026</p>
+          <p class="event-time" data-en="Sacred vows &amp; celebrations" data-hi="पवित्र फेरे एवं उत्सव">Sacred vows &amp; celebrations</p>
+          <p class="event-desc" data-en="The sacred union of Suraj &amp; Ritika — followed by a grand fireworks celebration." data-hi="सूरज एवं रितिका का पवित्र मिलन — भव्य आतिशबाजी उत्सव के साथ।">The sacred union of Suraj &amp; Ritika — followed by a grand fireworks celebration.</p>
+          <button class="fireworks-btn" id="celebrate-btn" type="button"><img class="btn-icon" src="sparkle.svg" alt="" /><span data-en="Light the Fireworks" data-hi="आतिशबाजी करें">Light the Fireworks</span></button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== VENUE ===================== -->
+  <section class="venue-section" id="venue">
+    <h2 class="section-title light" data-en="The Venue" data-hi="स्थान">The Venue</h2>
+    <div class="venue-card">
+      <div class="venue-icon"><img src="pin.svg" alt="" /></div>
+      <h3 class="venue-name" data-en="Maa Kalyaneswari Atithi Niwas" data-hi="माँ कल्याणेश्वरी अतिथि निवास">Maa Kalyaneswari Atithi Niwas</h3>
+      <p class="venue-addr" data-en="Near Maithon Dam" data-hi="मैथन डैम के पास">Near Maithon Dam</p>
+      <p class="venue-note" data-en="All celebrations will be held at the same venue." data-hi="सभी समारोह एक ही स्थान पर आयोजित किए जाएँगे।">All celebrations will be held at the same venue.</p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Maa+Kalyaneswari+Atithi+Niwas+Maithon+Dam" target="_blank" rel="noopener noreferrer" data-en="View on Map" data-hi="मानचित्र पर देखें">View on Map</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="ornament top"><img class="divider-img" src="divider.svg" alt="" /></div>
+    <p class="footer-names">Suraj <span class="amp">&amp;</span> Ritika</p>
+    <p class="footer-blessing" data-en="With love &amp; blessings — we await your presence." data-hi="प्रेम एवं आशीर्वाद सहित — आपकी उपस्थिति की प्रतीक्षा में।">With love &amp; blessings — we await your presence.</p>
+    <p class="footer-hashtag">#SurajWedsRitika</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

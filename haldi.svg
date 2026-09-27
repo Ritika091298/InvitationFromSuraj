@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 150" width="140" height="150">
+  <!-- shoulders / yellow outfit -->
+  <path d="M28 148 Q30 112 70 112 Q110 112 112 148 Z" fill="#f2b705" stroke="#c9702f" stroke-width="2"/>
+  <path d="M56 112 q14 12 28 0" fill="none" stroke="#c9702f" stroke-width="2"/>
+  <!-- neck -->
+  <rect x="62" y="86" width="16" height="14" rx="3" fill="#e7b48c"/>
+  <!-- head -->
+  <circle cx="70" cy="62" r="24" fill="#e7b48c" stroke="#8a5a3b" stroke-width="1.5"/>
+  <!-- hair -->
+  <path d="M46 62 Q45 34 70 34 Q95 34 94 62 Q84 48 70 48 Q56 48 46 62 Z" fill="#241812"/>
+  <!-- flower tucked in hair -->
+  <g fill="#e8801f"><circle cx="90" cy="46" r="4"/><circle cx="86" cy="42" r="3.5"/><circle cx="94" cy="42" r="3.5"/><circle cx="90" cy="40" r="3.5"/></g>
+  <circle cx="90" cy="44" r="2" fill="#f2b705"/>
+  <!-- turmeric smears on cheeks + forehead -->
+  <g fill="#f2b705" opacity="0.9">
+    <ellipse cx="54" cy="66" rx="7" ry="5" transform="rotate(-15 54 66)"/>
+    <ellipse cx="86" cy="66" rx="7" ry="5" transform="rotate(15 86 66)"/>
+    <path d="M58 46 q12 -4 24 0 q-12 6 -24 0 Z"/>
+  </g>
+  <!-- face features -->
+  <g fill="none" stroke="#6b4326" stroke-width="1.5" stroke-linecap="round">
+    <path d="M56 60 q5 -4 10 0"/><path d="M74 60 q5 -4 10 0"/>
+    <path d="M70 62 v7"/>
+  </g>
+  <path d="M62 74 q8 5 16 0" fill="#c0243c"/>
+  <circle cx="70" cy="50" r="2.2" fill="#8c1c2b"/>
+  <!-- bowl of haldi paste -->
+  <path d="M44 132 Q70 150 96 132 Q96 122 44 122 Z" fill="#e8801f" stroke="#c9702f" stroke-width="2"/>
+  <ellipse cx="70" cy="123" rx="26" ry="6" fill="#f2b705" stroke="#c9702f" stroke-width="1.5"/>
+  <!-- marigolds beside bowl -->
+  <g fill="#e8801f" stroke="#c9702f" stroke-width="1"><circle cx="34" cy="126" r="5"/><circle cx="106" cy="126" r="5"/></g>
+</svg>

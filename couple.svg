@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 190" width="160" height="190">
+  <!-- ===== GROOM (left) ===== -->
+  <path d="M18 184 Q40 174 62 184 L56 96 Q40 90 26 96 Z" fill="#f4e7c6" stroke="#b5852a" stroke-width="2"/>
+  <path d="M40 96 V184" stroke="#d6a63a" stroke-width="1.4"/>
+  <g fill="#8c1c2b"><circle cx="40" cy="112" r="1.5"/><circle cx="40" cy="126" r="1.5"/><circle cx="40" cy="140" r="1.5"/></g>
+  <!-- stole -->
+  <path d="M30 96 L26 176 L32 176 L36 98 Z" fill="#8c1c2b"/>
+  <!-- neck + head -->
+  <rect x="34" y="74" width="12" height="12" rx="3" fill="#e7b48c"/>
+  <circle cx="40" cy="60" r="15" fill="#e7b48c" stroke="#8a5a3b" stroke-width="1.4"/>
+  <!-- turban -->
+  <path d="M23 58 Q22 34 40 34 Q58 34 57 58 Q46 44 23 58 Z" fill="#c0243c" stroke="#d6a63a" stroke-width="2"/>
+  <path d="M40 34 L37 22 M40 34 L44 23" stroke="#d6a63a" stroke-width="1.5" fill="none"/>
+  <circle cx="40" cy="34" r="2.4" fill="#d6a63a"/>
+  <g fill="none" stroke="#6b4326" stroke-width="1.4" stroke-linecap="round">
+    <path d="M32 58 q3 -2 6 0"/><path d="M42 58 q3 -2 6 0"/>
+    <path d="M32 68 q8 5 8 -1 q0 6 8 1"/>
+  </g>
+
+  <!-- ===== BRIDE (right) ===== -->
+  <path d="M98 184 Q120 172 142 184 L130 100 Q120 94 110 100 Z" fill="#c0243c" stroke="#8c1c2b" stroke-width="2"/>
+  <path d="M98 184 Q120 173 142 184" fill="none" stroke="#d6a63a" stroke-width="4"/>
+  <path d="M110 100 q10 -6 20 0 L126 72 q-6 -3 -12 0 Z" fill="#8c1c2b"/>
+  <!-- neck + head -->
+  <rect x="114" y="74" width="12" height="12" rx="3" fill="#e7b48c"/>
+  <circle cx="120" cy="60" r="15" fill="#e7b48c" stroke="#8a5a3b" stroke-width="1.4"/>
+  <path d="M105 60 Q104 40 120 40 Q136 40 135 60 Q128 50 120 50 Q112 50 105 60 Z" fill="#241812"/>
+  <!-- dupatta over head -->
+  <path d="M103 60 Q103 34 120 32 Q137 34 137 60 Q136 52 131 50 Q120 42 109 50 Q104 52 103 60 Z"
+        fill="#c0243c" stroke="#d6a63a" stroke-width="1.8"/>
+  <g fill="none" stroke="#6b4326" stroke-width="1.4" stroke-linecap="round">
+    <path d="M112 58 q3 -2 6 0"/><path d="M122 58 q3 -2 6 0"/>
+  </g>
+  <path d="M115 68 q5 4 10 0" fill="#c0243c"/>
+  <circle cx="120" cy="52" r="1.8" fill="#8c1c2b"/>
+  <circle cx="106" cy="64" r="2.2" fill="#d6a63a"/><circle cx="134" cy="64" r="2.2" fill="#d6a63a"/>
+
+  <!-- jaimala garlands around both necks -->
+  <g fill="#e8801f" stroke="#c9702f" stroke-width="0.8">
+    <circle cx="30" cy="86" r="3"/><circle cx="36" cy="94" r="3"/><circle cx="44" cy="96" r="3"/><circle cx="50" cy="90" r="3"/>
+    <circle cx="110" cy="86" r="3"/><circle cx="116" cy="94" r="3"/><circle cx="124" cy="96" r="3"/><circle cx="130" cy="90" r="3"/>
+  </g>
+</svg>

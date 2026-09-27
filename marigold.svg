@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72">
+  <g stroke="#c9702f" stroke-width="1.5">
+    <g fill="#f6a623">
+      <ellipse cx="36" cy="18" rx="7" ry="11"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(45 36 36)"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(90 36 36)"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(135 36 36)"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(180 36 36)"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(225 36 36)"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(270 36 36)"/>
+      <ellipse cx="36" cy="18" rx="7" ry="11" transform="rotate(315 36 36)"/>
+    </g>
+    <g fill="#ffcf5c">
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(22 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(67 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(112 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(157 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(202 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(247 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(292 36 36)"/>
+      <ellipse cx="36" cy="24" rx="5.5" ry="8" transform="rotate(337 36 36)"/>
+    </g>
+  </g>
+  <circle cx="36" cy="36" r="7" fill="#c9702f"/>
+</svg>

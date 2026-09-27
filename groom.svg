@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 190" width="140" height="190">
+  <!-- churidar legs -->
+  <path d="M57 184 L59 122 L69 122 L69 184 Z" fill="#f4e7c6" stroke="#b5852a" stroke-width="1.5"/>
+  <path d="M71 184 L71 122 L81 122 L83 184 Z" fill="#f4e7c6" stroke="#b5852a" stroke-width="1.5"/>
+  <!-- mojari shoes -->
+  <path d="M53 184 q6 -6 16 0 Z" fill="#8c1c2b"/>
+  <path d="M71 184 q10 -6 16 0 Z" fill="#8c1c2b"/>
+  <!-- sherwani coat -->
+  <path d="M46 150 Q44 100 60 84 Q70 78 80 84 Q96 100 94 150 L70 156 Z" fill="#f4e7c6" stroke="#b5852a" stroke-width="2"/>
+  <!-- stole (maroon) -->
+  <path d="M60 84 L54 150 L61 150 L66 86 Z" fill="#8c1c2b"/>
+  <path d="M80 84 L86 150 L79 150 L74 86 Z" fill="#8c1c2b"/>
+  <!-- center placket + buttons -->
+  <path d="M70 84 V152" stroke="#d6a63a" stroke-width="1.5"/>
+  <g fill="#8c1c2b"><circle cx="70" cy="98" r="1.6"/><circle cx="70" cy="110" r="1.6"/><circle cx="70" cy="122" r="1.6"/><circle cx="70" cy="134" r="1.6"/></g>
+  <!-- neck -->
+  <rect x="63" y="64" width="14" height="13" rx="3" fill="#e7b48c"/>
+  <!-- head -->
+  <circle cx="70" cy="50" r="17" fill="#e7b48c" stroke="#8a5a3b" stroke-width="1.4"/>
+  <!-- turban (safa) -->
+  <path d="M51 48 Q50 22 70 22 Q90 22 89 48 Q76 34 51 48 Z" fill="#c0243c" stroke="#d6a63a" stroke-width="2"/>
+  <g fill="none" stroke="#8c1c2b" stroke-width="1.6" stroke-linecap="round">
+    <path d="M54 44 Q70 33 86 44"/><path d="M56 38 Q70 30 84 38"/>
+  </g>
+  <!-- kalgi + turban tail -->
+  <path d="M70 22 L67 8 M70 22 L73 9 M70 22 L64 10" stroke="#d6a63a" stroke-width="1.6" fill="none"/>
+  <circle cx="70" cy="22" r="2.8" fill="#d6a63a"/>
+  <path d="M88 40 Q100 44 96 60" fill="none" stroke="#c0243c" stroke-width="4" stroke-linecap="round"/>
+  <!-- face features -->
+  <g fill="none" stroke="#6b4326" stroke-width="1.5" stroke-linecap="round">
+    <path d="M60 48 q4 -3 8 0"/><path d="M72 48 q4 -3 8 0"/>
+    <path d="M70 51 v6"/>
+    <path d="M60 62 q10 6 10 -2 q0 8 10 2"/>
+  </g>
+  <!-- namaste hands -->
+  <path d="M70 96 L61 114 Q70 119 70 119 Q70 119 79 114 Z" fill="#e7b48c" stroke="#8a5a3b" stroke-width="1.2"/>
+</svg>
