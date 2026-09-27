@@ -1,5 +1,5 @@
 /* =========================================================
-   Ritika & Suraj — Wedding Invitation
+   Suraj & Ritika — Wedding Invitation
    Countdown · Language toggle (EN/HI) · Fireworks
    ========================================================= */
 
@@ -419,6 +419,6 @@
   // Expose for countdown completion
   window.launchFireworks = launchFireworks;
 
-  const btn = document.getElementById("celebrate-btn");
-  if (btn) btn.addEventListener("click", () => launchFireworks(14));
+  const receptionBtn = document.getElementById("reception-fireworks-btn");
+  if (receptionBtn) receptionBtn.addEventListener("click", () => launchFireworks(14));
 })();
