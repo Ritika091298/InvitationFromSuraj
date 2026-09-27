@@ -85,61 +85,16 @@
   revealTargets.forEach((el) => io.observe(el));
 
   /* ---------------- Full-invitation wedding music ---------------- */
-  // Browsers generally require a user gesture before playing audio.
-  // Once started, the instrumental keeps looping for the full invitation.
+  // Play the uploaded MP3 directly with no Web Audio EQ, compression or filtering.
+  // The original file remains untouched; only playback volume is faded at page end.
   const bgMusic = document.getElementById("bg-music");
   let musicStarted = false;
-  let audioContext = null;
-  let mediaSource = null;
-
-  function enhanceMusicClarity() {
-    if (!bgMusic || audioContext) return;
-
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-
-      audioContext = new AudioCtx();
-      mediaSource = audioContext.createMediaElementSource(bgMusic);
-
-      const lowShelf = audioContext.createBiquadFilter();
-      lowShelf.type = "lowshelf";
-      lowShelf.frequency.value = 180;
-      lowShelf.gain.value = 0.5;
-
-      const highShelf = audioContext.createBiquadFilter();
-      highShelf.type = "highshelf";
-      highShelf.frequency.value = 2600;
-      highShelf.gain.value = 2.2;
-
-      const compressor = audioContext.createDynamicsCompressor();
-      compressor.threshold.value = -18;
-      compressor.knee.value = 12;
-      compressor.ratio.value = 2;
-      compressor.attack.value = 0.02;
-      compressor.release.value = 0.22;
-
-      mediaSource
-        .connect(lowShelf)
-        .connect(highShelf)
-        .connect(compressor)
-        .connect(audioContext.destination);
-    } catch (e) {
-      // Fall back to normal HTML audio if Web Audio is unavailable.
-    }
-  }
 
   function startWeddingMusic() {
     if (!bgMusic) return;
 
-    enhanceMusicClarity();
-
-    if (audioContext && audioContext.state === "suspended") {
-      audioContext.resume().catch(() => {});
-    }
-
     bgMusic.loop = true;
-    bgMusic.volume = 0.58;
+    bgMusic.volume = 1;
 
     if (!bgMusic.paused) {
       musicStarted = true;
@@ -151,15 +106,14 @@
       playPromise
         .then(() => { musicStarted = true; })
         .catch(() => {
-          // A later tap/click will retry if autoplay was blocked.
+          // A later user gesture will retry if autoplay is blocked.
         });
     } else {
       musicStarted = true;
     }
   }
 
-  // Some browsers may allow this immediately; otherwise the envelope tap
-  // below starts playback. Music is intentionally never stopped on entry.
+  // Some browsers may allow this immediately; otherwise the envelope tap starts playback.
   startWeddingMusic();
 
   /* ---------------- Envelope intro ---------------- */
@@ -200,12 +154,12 @@
   /* ---------------- Stop music only at the end of the page ---------------- */
   let endFadeStarted = false;
 
-  function fadeMusicAtPageEnd(duration = 2200) {
+  function fadeMusicAtPageEnd(duration = 3200) {
     if (!bgMusic || bgMusic.paused || endFadeStarted) return;
     endFadeStarted = true;
 
     const startVolume = bgMusic.volume;
-    const steps = 28;
+    const steps = 40;
     const stepTime = Math.max(30, Math.floor(duration / steps));
     let step = 0;
 
