@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suraj &amp; Ritika — Wedding Invitation</title>
-  <meta name="description" content="You are cordially invited to the wedding of Suraj &amp; Ritika — 5th December 2026, Maa Kalyaneswari Atithi Niwas, Near Maithon Dam." />
+  <meta name="description" content="You are cordially invited to the wedding of Suraj &amp; Ritika — 5th December 2026, Shakuntalam Banquet Hall, Haldwani." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
@@ -15,7 +15,7 @@
   <!-- Decorative animated fireworks canvas (behind content) -->
   <canvas id="fireworks"></canvas>
 
-  <!-- Full wedding instrumental: plays continuously until the footer is reached. -->
+  <!-- Music plays only during the envelope/card intro. -->
   <audio id="bg-music" loop preload="auto">
     <source src="data:audio/mpeg;base64,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" type="audio/mpeg" />
   </audio>
@@ -61,7 +61,7 @@
     </div>
     <div class="hero-frame">
       <div class="ganeshji-block">
-        <img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/ganeshji.jpg" alt="Ganesh Ji" />
+        <img src="ganeshji.jpg" alt="Ganesh Ji" />
       </div>
       <div class="ornament top"><img class="divider-img" src="divider.svg" alt="" /></div>
       <p class="pre-title" data-en="Together with their families" data-hi="अपने परिवार के साथ">Together with their families</p>
@@ -73,7 +73,7 @@
         <span class="name">Ritika</span>
       </h1>
 
-      <p class="wed-venue" data-en="Maa Kalyaneswari Atithi Niwas · Near Maithon Dam" data-hi="माँ कल्याणेश्वरी अतिथि निवास · मैथन डैम के पास">Maa Kalyaneswari Atithi Niwas · Near Maithon Dam</p>
+      <p class="wed-venue" data-en="Shakuntalam Banquet Hall · Haldwani" data-hi="शकुंतलम बैंक्वेट हॉल · हल्द्वानी">Shakuntalam Banquet Hall · Haldwani</p>
       <div class="ornament bottom"><img class="divider-img" src="divider.svg" alt="" /></div>
     </div>
     <div class="scroll-cue" aria-hidden="true">&#8964;</div>
@@ -123,7 +123,7 @@
     <p class="events-sub" data-en="With hearts full of joy, two families become one" data-hi="हर्ष से भरे हृदय के साथ, दो परिवार एक होते हैं">With hearts full of joy, two families become one</p>
     <div class="couple-grid">
       <article class="person">
-        <div class="person-emblem"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/groom.jpg" alt="" /></div>
+        <div class="person-emblem"><img src="groom.jpg" alt="" /></div>
         <p class="person-role" data-en="The Groom&rsquo;s Family" data-hi="वर पक्ष">The Groom&rsquo;s Family</p>
         <p class="person-place" data-en="Haldwani, Uttarakhand" data-hi="हल्द्वानी, उत्तराखंड">Haldwani, Uttarakhand</p>
         <p class="person-parents" data-en="Smt. Savita &amp; Shri Rajendra Kumar Lumba"
@@ -139,7 +139,7 @@
       <div class="heart-divider" aria-hidden="true"><img src="heart.svg" alt="" /></div>
 
       <article class="person">
-        <div class="person-emblem"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/bride.jpg" alt="" /></div>
+        <div class="person-emblem"><img src="bride.jpg" alt="" /></div>
         <p class="person-role" data-en="The Bride&rsquo;s Family" data-hi="वधू पक्ष">The Bride&rsquo;s Family</p>
         <p class="person-place" data-en="Maithon, Jharkhand" data-hi="मैथन, झारखंड">Maithon, Jharkhand</p>
         <p class="person-parents" data-en="Smt. Maha Laxmi &amp; Shri Gopal Kumar Mahto"
@@ -148,7 +148,6 @@
         <h3 class="person-name" data-en="Ritika" data-hi="रितिका">Ritika</h3>
         <div class="person-lineage">
           <p data-en="Granddaughter of Late Shri Ram Ekbal Mahto &amp; Smt. Subhadra Devi" data-hi="स्वर्गीय श्री राम एकबाल महतो एवं श्रीमती सुभद्रा देवी की पौत्री">Granddaughter of Late Shri Ram Ekbal Mahto &amp; Smt. Subhadra Devi</p>
-          <p data-en="Niece of Shri Shashipal Mehta" data-hi="श्री शशिपाल मेहता की भतीजी">Niece of Shri Shashipal Mehta</p>
           <p data-en="Sister of Rohit Kumar" data-hi="रोहित कुमार की बहन">Sister of Rohit Kumar</p>
         </div>
       </article>
@@ -163,7 +162,7 @@
     <div class="timeline">
       <!-- Haldi & Mehndi -->
       <article class="event-card">
-        <div class="event-icon"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/haldi.jpg" alt="" /></div>
+        <div class="event-icon"><img src="haldi.jpg" alt="" /></div>
         <div class="event-body">
           <h3 class="event-name" data-en="Haldi &amp; Mehndi" data-hi="हल्दी एवं मेहंदी">Haldi &amp; Mehndi</h3>
           <p class="event-date" data-en="Friday, 4th December 2026" data-hi="शुक्रवार, 4 दिसम्बर 2026">Friday, 4th December 2026</p>
@@ -174,7 +173,7 @@
 
       <!-- Sangeet & Engagement -->
       <article class="event-card">
-        <div class="event-icon"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/dhol.jpg" alt="" /></div>
+        <div class="event-icon"><img src="dhol.jpg" alt="" /></div>
         <div class="event-body">
           <h3 class="event-name" data-en="Sangeet &amp; Engagement" data-hi="संगीत एवं सगाई">Sangeet &amp; Engagement</h3>
           <p class="event-date" data-en="Friday, 4th December 2026" data-hi="शुक्रवार, 4 दिसम्बर 2026">Friday, 4th December 2026</p>
@@ -185,13 +184,24 @@
 
       <!-- Wedding -->
       <article class="event-card highlight">
-        <div class="event-icon"><img src="https://raw.githubusercontent.com/Ritika091298/InvitationFromRitika/main/couple.jpg" alt="" /></div>
+        <div class="event-icon"><img src="couple.jpg" alt="" /></div>
         <div class="event-body">
           <h3 class="event-name" data-en="The Wedding" data-hi="विवाह">The Wedding</h3>
           <p class="event-date" data-en="Saturday, 5th December 2026" data-hi="शनिवार, 5 दिसम्बर 2026">Saturday, 5th December 2026</p>
           <p class="event-time" data-en="Sacred vows &amp; celebrations" data-hi="पवित्र फेरे एवं उत्सव">Sacred vows &amp; celebrations</p>
-          <p class="event-desc" data-en="The sacred union of Suraj &amp; Ritika — followed by a grand fireworks celebration." data-hi="सूरज एवं रितिका का पवित्र मिलन — भव्य आतिशबाजी उत्सव के साथ।">The sacred union of Suraj &amp; Ritika — followed by a grand fireworks celebration.</p>
-          <button class="fireworks-btn" id="celebrate-btn" type="button"><img class="btn-icon" src="sparkle.svg" alt="" /><span data-en="Light the Fireworks" data-hi="आतिशबाजी करें">Light the Fireworks</span></button>
+          <p class="event-desc" data-en="The sacred union of Suraj &amp; Ritika — followed by a joyful celebration." data-hi="सूरज एवं रितिका का पवित्र मिलन — उल्लासपूर्ण उत्सव के साथ।">The sacred union of Suraj &amp; Ritika — followed by a joyful celebration.</p>
+        </div>
+      </article>
+
+      <!-- Reception -->
+      <article class="event-card highlight">
+        <div class="event-icon"><img src="couple.jpg" alt="" /></div>
+        <div class="event-body">
+          <h3 class="event-name" data-en="Reception" data-hi="रिसेप्शन">Reception</h3>
+          <p class="event-date" data-en="Tuesday, 8th December 2026" data-hi="मंगलवार, 8 दिसम्बर 2026">Tuesday, 8th December 2026</p>
+          <p class="event-time" data-en="An evening of blessings &amp; celebration" data-hi="आशीर्वाद एवं उत्सव की संध्या">An evening of blessings &amp; celebration</p>
+          <p class="event-desc" data-en="Join us for a graceful evening of joy, togetherness and warm blessings as we celebrate the beginning of our new journey." data-hi="हमारे नए जीवन की शुरुआत के उपलक्ष्य में आनंद, मिलन और स्नेहिल आशीर्वादों से भरी इस सुंदर संध्या में आपका सादर स्वागत है।">Join us for a graceful evening of joy, togetherness and warm blessings as we celebrate the beginning of our new journey.</p>
+          <button class="fireworks-btn" id="reception-fireworks-btn" type="button"><img class="btn-icon" src="sparkle.svg" alt="" /><span data-en="Light the Fireworks" data-hi="आतिशबाजी करें">Light the Fireworks</span></button>
         </div>
       </article>
     </div>
@@ -202,10 +212,10 @@
     <h2 class="section-title light" data-en="The Venue" data-hi="स्थान">The Venue</h2>
     <div class="venue-card">
       <div class="venue-icon"><img src="pin.svg" alt="" /></div>
-      <h3 class="venue-name" data-en="Maa Kalyaneswari Atithi Niwas" data-hi="माँ कल्याणेश्वरी अतिथि निवास">Maa Kalyaneswari Atithi Niwas</h3>
-      <p class="venue-addr" data-en="Near Maithon Dam" data-hi="मैथन डैम के पास">Near Maithon Dam</p>
-      <p class="venue-note" data-en="All celebrations will be held at the same venue." data-hi="सभी समारोह एक ही स्थान पर आयोजित किए जाएँगे।">All celebrations will be held at the same venue.</p>
-      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Maa+Kalyaneswari+Atithi+Niwas+Maithon+Dam" target="_blank" rel="noopener noreferrer" data-en="View on Map" data-hi="मानचित्र पर देखें">View on Map</a>
+      <h3 class="venue-name" data-en="Shakuntalam Banquet Hall" data-hi="शकुंतलम बैंक्वेट हॉल">Shakuntalam Banquet Hall</h3>
+      <p class="venue-addr" data-en="Rudrapur - Haldwani Rd, Dahariya, Haldwani, Uttarakhand 263139, India" data-hi="रुद्रपुर - हल्द्वानी रोड, डहरिया, हल्द्वानी, उत्तराखंड 263139, भारत">Rudrapur - Haldwani Rd, Dahariya, Haldwani, Uttarakhand 263139, India</p>
+      <p class="venue-note" data-en="We look forward to celebrating the reception with you here." data-hi="हम यहाँ आपके साथ रिसेप्शन का उत्सव मनाने के लिए उत्सुक हैं।">We look forward to celebrating the reception with you here.</p>
+      <a class="map-btn" href="https://maps.app.goo.gl/U88sRzwazdK6c89D9" target="_blank" rel="noopener noreferrer" data-en="View on Map" data-hi="मानचित्र पर देखें">View on Map</a>
     </div>
   </section>
 
@@ -218,6 +228,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <!-- pages-trigger -->
 </body>
 </html>

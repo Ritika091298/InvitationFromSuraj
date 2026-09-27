@@ -368,37 +368,44 @@ html[lang="hi"] .env-names { font-family: var(--font-display); font-size: 1.8rem
 
 .ganeshji-block {
   position: relative;
-  width: clamp(130px, 20vw, 180px);
+  width: clamp(124px, 19vw, 158px);
+  aspect-ratio: 1;
   margin: 0 auto 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  isolation: isolate;
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,0.22));
+  padding: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(251,245,233,0.10);
+  border: 1.5px solid rgba(230,200,116,0.90);
+  box-shadow:
+    0 0 0 5px rgba(201,162,75,0.08),
+    0 12px 30px rgba(0,0,0,0.26),
+    0 0 24px rgba(230,200,116,0.12);
 }
 
 .ganeshji-block::before {
   content: "";
   position: absolute;
-  inset: 12% 6%;
+  inset: 0;
+  border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(230, 200, 116, 0.28) 0%,
-    rgba(230, 200, 116, 0.12) 42%,
-    transparent 75%
+    rgba(230,200,116,0.10) 0%,
+    rgba(92,15,27,0.08) 58%,
+    rgba(61,10,19,0.22) 100%
   );
-  z-index: -1;
-  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .ganeshji-block img {
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  background: transparent;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
   mix-blend-mode: multiply;
-  filter: contrast(1.18) saturate(0.92) brightness(1.02);
+  filter: contrast(1.14) saturate(0.94) brightness(1.03);
 }
 
 .hero-frame > .ornament.top {
@@ -847,7 +854,7 @@ html[lang="hi"] .footer-names { font-family: var(--font-display); font-size: 2.2
   }
 
   .ganeshji-block {
-    width: 120px;
+    width: 116px;
     margin-bottom: 14px;
   }
 
